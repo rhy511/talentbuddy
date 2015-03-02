@@ -1,0 +1,44 @@
+//My Method
+class MyClass {
+
+    public static void sort_locations(Integer a, Integer b, Integer c) {
+        if(a<b && a<c){
+            System.out.println(a);
+            System.out.println(b<c?b:c);
+            System.out.println(b>c?b:c);
+        }else if(b<a && b<c){
+            System.out.println(b);
+            System.out.println(a<c?a:c);
+            System.out.println(a>c?a:c);
+        }else{
+            System.out.println(c);
+            System.out.println(a<b?a:b);
+            System.out.println(a>b?a:b);
+        }
+    }
+}
+
+
+//Another one
+class MyClass {
+    public static void sort_locations(Integer a, Integer b, Integer c) {
+        int min = Math.min(a, Math.min(b, c));
+        int max = Math.max(a, Math.max(b, c));
+        int middle = a + b + c - min - max;
+        System.out.println(min + " " + middle + " " + max);
+    }
+}
+
+
+//The best of all methods
+import java.util.*;
+
+class MyClass {
+    public static void sort_locations(Integer a, Integer b, Integer c) {
+        // Write your code here.
+        Integer[] array = new Integer[] {a, b, c};
+        Arrays.sort(array);
+        for (Integer n : array)
+            System.out.print(n + " ");
+    }
+}
